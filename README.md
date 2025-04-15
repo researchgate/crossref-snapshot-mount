@@ -180,7 +180,7 @@ Unfortunately, more often than not , the data is not clean and you will have to 
   This will attempt to reload the files listed in failed_uploads.txt. 
   For speed you can increase the size of the batch by increasing $FILES_PER_BATCH
   
-  DISCLAIMER: you will have to re-run the **loadtobq_retry.py** couple of times (modify $FAILED_LOG and $RETRY_FAILED_LOG for each run) until all that remains of the errors is bad data i.e. the 400s.
+  DISCLAIMER: you will have to re-run the **loadtobq_retry.py** couple of times until all that remains of the errors is bad data i.e. the 400s.
 
 ### Dealing with 400  (manual)
 
