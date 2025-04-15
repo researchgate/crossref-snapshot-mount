@@ -1,0 +1,3197 @@
+[
+  {
+    "name": "proceedings-subject",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "translator",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields":
+    [
+      {
+        "name": "suffix",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ORCID",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "authenticated-orcid",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "sequence",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "affiliation",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "country",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "department",
+            "type": "STRING",
+            "mode": "REPEATED"
+          },
+          {
+            "name": "place",
+            "type": "STRING",
+            "mode": "REPEATED"
+          },
+          {
+            "name": "acronym",
+            "type": "STRING",
+            "mode": "REPEATED"
+          },
+          {
+            "name": "id",
+            "type": "RECORD",
+            "mode": "REPEATED",
+            "fields":
+            [
+              {
+                "name": "asserted-by",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              },
+              {
+                "name": "id-type",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              },
+              {
+                "name": "id",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "family",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "given",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "fields": [
+      {
+        "name": "affiliation",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "country",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "department",
+            "type": "STRING",
+            "mode": "REPEATED"
+          },
+          {
+            "name": "place",
+            "type": "STRING",
+            "mode": "REPEATED"
+          },
+          {
+            "name": "acronym",
+            "type": "STRING",
+            "mode": "REPEATED"
+          },
+          {
+            "name": "id",
+            "type": "RECORD",
+            "mode": "REPEATED",
+            "fields":
+            [
+              {
+                "name": "asserted-by",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              },
+              {
+                "name": "id-type",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              },
+              {
+                "name": "id",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "suffix",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "sequence",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "family",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "given",
+        "type": "STRING"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "name",
+        "type": "STRING"
+      },
+      {
+        "name": "authenticated-orcid",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+      },
+      {
+        "mode": "NULLABLE",
+        "name": "ORCID",
+        "type": "STRING"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "chair",
+    "type": "RECORD"
+  },
+  {
+    "name": "content-created",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "content-updated",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "part-number",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "update-to",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields":
+    [
+      {
+        "name": "record-id",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "label",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "type",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "DOI",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "updated",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields":
+        [
+          {
+            "name": "date",
+            "type": "DATE",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "timestamp",
+            "type": "INTEGER",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "date-time",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "source",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "description",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "authenticated-orcid",
+    "type": "BOOLEAN",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "award",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "project",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields":
+    [
+      {
+        "name": "co-lead-investigator",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "given",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "alternate-name",
+            "type": "STRING",
+            "mode": "REPEATED"
+          },
+          {
+            "name": "affiliation",
+            "type": "RECORD",
+            "mode": "REPEATED",
+            "fields":
+            [
+              {
+                "name": "country",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              },
+              {
+                "name": "name",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              },
+              {
+                "name": "id",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields":
+                [
+                  {
+                    "name": "asserted-by",
+                    "type": "STRING",
+                    "mode": "NULLABLE"
+                  },
+                  {
+                    "name": "id-type",
+                    "type": "STRING",
+                    "mode": "NULLABLE"
+                  },
+                  {
+                    "name": "id",
+                    "type": "STRING",
+                    "mode": "NULLABLE"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "family",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "authenticated-orcid",
+            "type": "BOOLEAN",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "ORCID",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "role-start",
+            "type": "RECORD",
+            "mode": "NULLABLE",
+            "fields":
+            [
+              {
+                "name": "date",
+                "type": "DATE",
+                "mode": "NULLABLE"
+              }
+            ]
+          },
+          {
+            "name": "role-end",
+            "type": "RECORD",
+            "mode": "NULLABLE",
+            "fields":
+            [
+              {
+                "name": "date",
+                "type": "DATE",
+                "mode": "NULLABLE"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "investigator",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "given",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "alternate-name",
+            "type": "STRING",
+            "mode": "REPEATED"
+          },
+          {
+            "name": "affiliation",
+            "type": "RECORD",
+            "mode": "REPEATED",
+            "fields":
+            [
+              {
+                "name": "country",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              },
+              {
+                "name": "name",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              },
+              {
+                "name": "id",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields":
+                [
+                  {
+                    "name": "asserted-by",
+                    "type": "STRING",
+                    "mode": "NULLABLE"
+                  },
+                  {
+                    "name": "id-type",
+                    "type": "STRING",
+                    "mode": "NULLABLE"
+                  },
+                  {
+                    "name": "id",
+                    "type": "STRING",
+                    "mode": "NULLABLE"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "family",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "authenticated-orcid",
+            "type": "BOOLEAN",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "ORCID",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "role-start",
+            "type": "RECORD",
+            "mode": "NULLABLE",
+            "fields":
+            [
+              {
+                "name": "date",
+                "type": "DATE",
+                "mode": "NULLABLE"
+              }
+            ]
+          },
+          {
+            "name": "role-end",
+            "type": "RECORD",
+            "mode": "NULLABLE",
+            "fields":
+            [
+              {
+                "name": "date",
+                "type": "DATE",
+                "mode": "NULLABLE"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "award-planned-end",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields":
+        [
+          {
+            "name": "date",
+            "type": "DATE",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "award-end",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields":
+        [
+          {
+            "name": "date",
+            "type": "DATE",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "award-start",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields":
+        [
+          {
+            "name": "date",
+            "type": "DATE",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "award-amount",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields":
+        [
+          {
+            "name": "currency",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "amount",
+            "type": "FLOAT",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "lead-investigator",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "given",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "alternate-name",
+            "type": "STRING",
+            "mode": "REPEATED"
+          },
+          {
+            "name": "affiliation",
+            "type": "RECORD",
+            "mode": "REPEATED",
+            "fields":
+            [
+              {
+                "name": "country",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              },
+              {
+                "name": "name",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              },
+              {
+                "name": "id",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields":
+                [
+                  {
+                    "name": "asserted-by",
+                    "type": "STRING",
+                    "mode": "NULLABLE"
+                  },
+                  {
+                    "name": "id-type",
+                    "type": "STRING",
+                    "mode": "NULLABLE"
+                  },
+                  {
+                    "name": "id",
+                    "type": "STRING",
+                    "mode": "NULLABLE"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "family",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "authenticated-orcid",
+            "type": "BOOLEAN",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "ORCID",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "role-start",
+            "type": "RECORD",
+            "mode": "NULLABLE",
+            "fields":
+            [
+              {
+                "name": "date",
+                "type": "DATE",
+                "mode": "NULLABLE"
+              }
+            ]
+          },
+          {
+            "name": "role-end",
+            "type": "RECORD",
+            "mode": "NULLABLE",
+            "fields":
+            [
+              {
+                "name": "date",
+                "type": "DATE",
+                "mode": "NULLABLE"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "funding",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "funder",
+            "type": "RECORD",
+            "mode": "NULLABLE",
+            "fields":
+            [
+              {
+                "name": "id",
+                "type": "RECORD",
+                "mode": "REPEATED",
+                "fields":
+                [
+                  {
+                    "name": "asserted-by",
+                    "type": "STRING",
+                    "mode": "NULLABLE"
+                  },
+                  {
+                    "name": "id-type",
+                    "type": "STRING",
+                    "mode": "NULLABLE"
+                  },
+                  {
+                    "name": "id",
+                    "type": "STRING",
+                    "mode": "NULLABLE"
+                  }
+                ]
+              },
+              {
+                "name": "name",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              }
+            ]
+          },
+          {
+            "name": "award-amount",
+            "type": "RECORD",
+            "mode": "NULLABLE",
+            "fields":
+            [
+              {
+                "name": "percentage",
+                "type": "INTEGER",
+                "mode": "NULLABLE"
+              },
+              {
+                "name": "currency",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              },
+              {
+                "name": "amount",
+                "type": "FLOAT",
+                "mode": "NULLABLE"
+              }
+            ]
+          },
+          {
+            "name": "scheme",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "project-description",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "language",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "description",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "project-title",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "language",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "title",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "event",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "theme",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "sponsor",
+        "type": "STRING",
+        "mode": "REPEATED"
+      },
+      {
+        "name": "end",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields":
+        [
+          {
+            "name": "date",
+            "type": "DATE",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "acronym",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "location",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "number",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "start",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields":
+        [
+          {
+            "name": "date",
+            "type": "DATE",
+            "mode": "NULLABLE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "published-other",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "ISBN",
+    "type": "STRING",
+    "mode": "REPEATED"
+  },
+  {
+    "name": "subtitle",
+    "type": "STRING",
+    "mode": "REPEATED"
+  },
+  {
+    "name": "isbn-type",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields":
+    [
+      {
+        "name": "type",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "value",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "issue-title",
+    "type": "STRING",
+    "mode": "REPEATED"
+  },
+  {
+    "name": "original-title",
+    "type": "STRING",
+    "mode": "REPEATED"
+  },
+  {
+    "name": "archive",
+    "type": "STRING",
+    "mode": "REPEATED"
+  },
+  {
+    "name": "degree",
+    "type": "STRING",
+    "mode": "REPEATED"
+  },
+  {
+    "name": "institution",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields":
+    [
+      {
+        "name": "id",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "place",
+        "type": "STRING",
+        "mode": "REPEATED"
+      },
+      {
+        "name": "department",
+        "type": "STRING",
+        "mode": "REPEATED"
+      },
+      {
+        "name": "acronym",
+        "type": "STRING",
+        "mode": "REPEATED"
+      },
+      {
+        "name": "name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "accepted",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "assertion",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields":
+    [
+      {
+        "name": "group",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields":
+        [
+          {
+            "name": "label",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "name",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "URL",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "order",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "label",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "explanation",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields":
+        [
+          {
+            "name": "URL",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "value",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "published-print",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "update-policy",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "prefix",
+    "type": "FLOAT",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "short-container-title",
+    "type": "STRING",
+    "mode": "REPEATED"
+  },
+  {
+    "name": "publisher-location",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "award-start",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "page",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "subtype",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "source",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "language",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "reference",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields":
+    [
+      {
+        "name": "standards-body",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "issn-type",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "standard-designator",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "component",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ISSN",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ISBN",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "volume-title",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "edition",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "issue",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "series-title",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "unstructured",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "key",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "journal-title",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "volume",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "year",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "first-page",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "DOI",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "article-title",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "author",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "isbn-type",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "doi-asserted-by",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "relation",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "has-manifestation",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-required-by",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-manifestation-of",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-variant-form-of",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "has-expression",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "requires",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-varient-form-of",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-expression-of",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-compiled-by",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "compiles",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "finances",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-financed-by",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-original-form-of",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "continues",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "documents",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "has-part",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-documented-by",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-continued-by",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "has-format",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "based-on-data",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-manuscript-of",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "has-derivation",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-based-on",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "has-manuscript",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "replaces",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-derived-from",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "has-reply",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-data-basis-for",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-same-as",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-identical-to",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "has-related-material",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-comment-on",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-supplement-to",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-preprint-of",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "has-translation",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-part-of",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "has-review",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "has-comment",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-translation-of",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-review-of",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-replaced-by",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-reply-to",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-basis-for",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-related-material",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "references",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "has-version",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-version-of",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-supplemented-by",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "is-referenced-by",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "has-preprint",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "updated-by",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+      {
+        "name": "record-id",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "updated",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields": [
+          {
+            "name": "timestamp",
+            "type": "INTEGER",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "date-time",
+            "type": "TIMESTAMP",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "date",
+            "type": "DATE",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "type",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "source",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "label",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "DOI",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "editor",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields":
+    [
+      {
+        "name": "suffix",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ORCID",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "authenticated-orcid",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "sequence",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "affiliation",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "country",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "department",
+            "type": "STRING",
+            "mode": "REPEATED"
+          },
+          {
+            "name": "place",
+            "type": "STRING",
+            "mode": "REPEATED"
+          },
+          {
+            "name": "acronym",
+            "type": "STRING",
+            "mode": "REPEATED"
+          },
+          {
+            "name": "id",
+            "type": "RECORD",
+            "mode": "REPEATED",
+            "fields":
+            [
+              {
+                "name": "asserted-by",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              },
+              {
+                "name": "id-type",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              },
+              {
+                "name": "id",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "family",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "given",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "references-count",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "posted",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "deposited",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "timestamp",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "date-time",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "approved",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "volume",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "article-number",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "publisher",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "review",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "revision-round",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "competing-interest-statement",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "type",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "stage",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "language",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "running-number",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "recommendation",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "type",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "special_numbering",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "link",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields":
+    [
+      {
+        "name": "intended-application",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "content-version",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "content-type",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "URL",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "title",
+    "type": "STRING",
+    "mode": "REPEATED"
+  },
+  {
+    "name": "funder",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields":
+    [
+      {
+        "name": "id",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+          {
+            "name": "id-type",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "id",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "asserted-by",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "award",
+        "type": "STRING",
+        "mode": "REPEATED"
+      },
+      {
+        "name": "doi-asserted-by",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "DOI",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "abstract",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "ISSN",
+    "type": "STRING",
+    "mode": "REPEATED"
+  },
+  {
+    "name": "DOI",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "short-title",
+    "type": "STRING",
+    "mode": "REPEATED"
+  },
+  {
+    "name": "reference-count",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "score",
+    "type": "FLOAT",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "published-online",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "resource",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "secondary",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "label",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "URL",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "primary",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields":
+        [
+          {
+            "name": "URL",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "aliases",
+    "type": "STRING",
+    "mode": "REPEATED"
+  },
+  {
+    "name": "container-title",
+    "type": "STRING",
+    "mode": "REPEATED"
+  },
+  {
+    "name": "issued",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "issn-type",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields":
+    [
+      {
+        "name": "type",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "value",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "alternative-id",
+    "type": "STRING",
+    "mode": "REPEATED"
+  },
+  {
+    "name": "indexed",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "timestamp",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "date-time",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "version",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "URL",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "author",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields":
+    [
+      {
+        "name": "suffix",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "authenticated-orcid",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "sequence",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "given",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "affiliation",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields":
+        [
+          {
+            "name": "country",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "department",
+            "type": "STRING",
+            "mode": "REPEATED"
+          },
+          {
+            "name": "place",
+            "type": "STRING",
+            "mode": "REPEATED"
+          },
+          {
+            "name": "acronym",
+            "type": "STRING",
+            "mode": "REPEATED"
+          },
+          {
+            "name": "id",
+            "type": "RECORD",
+            "mode": "REPEATED",
+            "fields":
+            [
+              {
+                "name": "asserted-by",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              },
+              {
+                "name": "id-type",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              },
+              {
+                "name": "id",
+                "type": "STRING",
+                "mode": "NULLABLE"
+              }
+            ]
+          },
+          {
+            "name": "name",
+            "type": "STRING",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "family",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "ORCID",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "is-referenced-by-count",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "issue",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "clinical-trial-number",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields":
+    [
+      {
+        "name": "type",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "registry",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "clinical-trial-number",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "content-domain",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "crossmark-restriction",
+        "type": "BOOLEAN",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "domain",
+        "type": "STRING",
+        "mode": "REPEATED"
+      }
+    ]
+  },
+  {
+    "name": "license",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields":
+    [
+      {
+        "name": "URL",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "content-version",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "delay-in-days",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "start",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields":
+        [
+          {
+            "name": "date",
+            "type": "DATE",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "timestamp",
+            "type": "INTEGER",
+            "mode": "NULLABLE"
+          },
+          {
+            "name": "date-time",
+            "type": "TIMESTAMP",
+            "mode": "NULLABLE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "member",
+    "type": "INTEGER",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "created",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "timestamp",
+        "type": "INTEGER",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "date-time",
+        "type": "TIMESTAMP",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "group-title",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "edition-number",
+    "type": "STRING",
+    "mode": "NULLABLE"
+  },
+  {
+    "name": "published",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "date",
+        "type": "DATE",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "standards-body",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "acronym",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      },
+      {
+        "name": "name",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  },
+  {
+    "name": "journal-issue",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields":
+    [
+      {
+        "name": "published-online",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields":
+        [
+          {
+            "name": "date",
+            "type": "DATE",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "published-print",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields":
+        [
+          {
+            "name": "date",
+            "type": "DATE",
+            "mode": "NULLABLE"
+          }
+        ]
+      },
+      {
+        "name": "issue",
+        "type": "STRING",
+        "mode": "NULLABLE"
+      }
+    ]
+  }
+]
