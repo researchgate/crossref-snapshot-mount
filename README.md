@@ -52,19 +52,6 @@ We will be working primarily with VM to download the latest snapshot and upload 
 
   ```tar -xvf April_2024_Public_Data_File_from_Crossref.tar```
 
-* you can extract the file in the bucket itself , in this iteration we went via VM
-
-  find "April 2024 Public Data File from Crossref" -name "*.jsonl.gz" > files_to_upload.txt
-
-  while IFS= read -r file; do
-  gsutil cp "$file" gs://crossref/extracted/
-  done < files_to_upload.txt
-
-* If the upload stopped midway:
-
-  find "April 2024 Public Data File from Crossref" -name "*.jsonl.gz" -print0 | xargs -0 -P10 -I {} gsutil cp -n "{}" gs://crossref/extracted/
-
-
 * Python set up in VM
   ```sudo apt install python3-pip
       sudo apt install python3-venv
