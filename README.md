@@ -18,11 +18,11 @@ We will be working primarily with VM to download the latest snapshot and upload 
           --role=roles/storage.objectAdmin
     * **restart** the VM for IAM policy to take effect
 
-## Downloading the latest crossref artifact
+## Download the crossref yearly dump and set up the VM to process it
 
-* Install awscli
+* Once your VM  is setup. Start the VM and install awscli
 
-  ```brew install awscli```
+  ```sudo apt install awscli```
 
 * Configure and download the snapshot
     ```aws configure
@@ -32,11 +32,15 @@ We will be working primarily with VM to download the latest snapshot and upload 
        Default output format [None]: 
 
 * List the files by crossref on aws:
-  ``` aws s3 ls --request-payer requester s3://api-snapshots-reqpays-crossref
-       2023-05-09 15:14:12 185897154560 April_2023_Public_Data_File_from_Crossref.tar
-       2024-05-09 19:56:17 212156057600 April_2024_Public_Data_File_from_Crossref.tar`
+  ```
+       aws s3 ls --request-payer requester s3://api-snapshots-reqpays-crossref
 
-* Download the file:
+       should show something like:  
+       2023-05-09 15:14:12 185897154560 April_2023_Public_Data_File_from_Crossref.tar
+       2024-05-09 19:56:17 212156057600 April_2024_Public_Data_File_from_Crossref.tar
+  ```
+
+* Download the file to current location in your VM:
 
   ```aws s3api get-object --bucket api-snapshots-reqpays-crossref --request-payer requester --key  April_2024_Public_Data_File_from_Crossref.tar ./April_2024_Public_Data_File_from_Crossref.tar```
 
@@ -71,7 +75,7 @@ We will be working primarily with VM to download the latest snapshot and upload 
 
   ```pip3 install google-cloud-storage google-cloud-bigquery```
 
-## Cleaning up and loading the data to a BQ table
+## Processing the yearly dump
 
 We divide this process into two-steps
 * cleaning the data
@@ -84,7 +88,7 @@ to lose track of successful and failed file cleanups/uploads.
 
 ### Cleanup
 
-* The minimum amount of cleanup that is a must is flattening the field "date-parts". In the crossref snapshots, date-parts are double arrays [["YYYY-MM-DDTHH:MM:S]].
+* The minimum amount of cleanup that is a must is flattening the field "date-parts". In the crossref snapshots, date-parts are double arrays [["YYYY-MM-DDTHH:MM:S]] fields which BQ does not allow.
   We run a python script to flatten the date-parts field.
 
 #### Running the cleanup script
@@ -102,7 +106,7 @@ to lose track of successful and failed file cleanups/uploads.
 ```
    
    
-* Make sure your venv environment is activated(check above for command). Run the script
+* Make sure your venv environment is activated(source myenv/bin/activate) in the VM. Run the script in your VM
   ```
   python3 crossref_cleanup.py
   ``` 
@@ -176,7 +180,7 @@ Unfortunately, more often than not , the data is not clean and you will have to 
   This will attempt to reload the files listed in failed_uploads.txt. 
   For speed you can increase the size of the batch by increasing $FILES_PER_BATCH
   
-  DISCLAIMER: you will have to re-run the **loadtobq_retry.py** couple of times until all that remains of the errors is bad data i.e. the 400s.
+  DISCLAIMER: you will have to re-run the **loadtobq_retry.py** couple of times (modify $FAILED_LOG and $RETRY_FAILED_LOG for each run) until all that remains of the errors is bad data i.e. the 400s.
 
 ### Dealing with 400  (manual)
 
