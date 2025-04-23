@@ -11,12 +11,15 @@ We will be working primarily with VM to download the latest snapshot and upload 
 * while creating the VM, under `Identity and API access` -> Allow full access to all Cloud APIs. This will be required to write
   to bucket.
 * Once your VM is setup, find out your service account
-  ```gcloud compute instances describe crossref --zone="northamerica-northeast2-b" --format='value(serviceAccounts.email)'`
-    * grant permission to your service account to be able to manage objects in bucket via VM
-      ```gcloud storage buckets add-iam-policy-binding gs://crossref \
-          --member=serviceAccount:830983394603-compute@developer.gserviceaccount.com \
-          --role=roles/storage.objectAdmin
-    * **restart** the VM for IAM policy to take effect
+  ```
+  gcloud compute instances describe crossref --zone="northamerica-northeast2-b" --format='value(serviceAccounts.email)'
+  ```
+* grant permission to your service account to be able to manage objects in bucket via VM
+  ```
+      gcloud storage buckets add-iam-policy-binding gs://crossref \
+      --member=serviceAccount:830983394603-compute@developer.gserviceaccount.com \
+      --role=roles/storage.objectAdmin
+* **restart** the VM for IAM policy to take effect
 
 ## Download the crossref yearly dump and set up the VM to process it
 
@@ -25,12 +28,13 @@ We will be working primarily with VM to download the latest snapshot and upload 
   ```sudo apt install awscli```
 
 * Configure and download the snapshot
-    ```aws configure
+    ```
+       aws configure
        AWS Access Key ID [None]:  $give_the_key_id
        AWS Secret Access Key [None]: $give_the_secret_access_key
        Default region name [None]: 
        Default output format [None]: 
-
+  ```
 * List the files by crossref on aws:
   ```
        aws s3 ls --request-payer requester s3://api-snapshots-reqpays-crossref
@@ -42,25 +46,35 @@ We will be working primarily with VM to download the latest snapshot and upload 
 
 * Download the file to current location in your VM:
 
-  ```aws s3api get-object --bucket api-snapshots-reqpays-crossref --request-payer requester --key  April_2024_Public_Data_File_from_Crossref.tar ./April_2024_Public_Data_File_from_Crossref.tar```
+  ```
+  aws s3api get-object --bucket api-snapshots-reqpays-crossref --request-payer requester --key  April_2024_Public_Data_File_from_Crossref.tar ./April_2024_Public_Data_File_from_Crossref.tar
+  ```
 
 * upload the file to the crossref bucket to prevent any mishaps in case of VM deletion and data loss
 
-  ```gsutil cp April_2024_Public_Data_File_from_Crossref.tar  gs://crossref```
+  ```
+  gsutil cp April_2024_Public_Data_File_from_Crossref.tar  gs://crossref
+  ```
 
 * unzip the tar file in VM because we will cleanup the data with a python script that accesses extracted files in VM:
 
-  ```tar -xvf April_2024_Public_Data_File_from_Crossref.tar```
+  ```
+  tar -xvf April_2024_Public_Data_File_from_Crossref.tar
+  ```
 
 * Python set up in VM
-  ```sudo apt install python3-pip
+  ```
+      sudo apt install python3-pip
       sudo apt install python3-venv
       python3 -m venv myenv
       source myenv/bin/activate
+  ```
 
 * BQ package install:
 
-  ```pip3 install google-cloud-storage google-cloud-bigquery```
+  ```
+   pip3 install google-cloud-storage google-cloud-bigquery
+  ```
 
 ## Processing the yearly dump
 
